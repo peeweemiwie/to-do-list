@@ -1,6 +1,8 @@
-<input #newHero
-  (keyup.enter)="addHero(newHero.value)">
+<input #newItem
+  (keyup.enter)="addList(newItem.value)">
 
-  <button (click)="addHero(newHero.value)">Add</button>
+  <button (click)="addList(newItem.value)">Add</button>
 
-  <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
+  <ul>
+    <li *ngFor="let item of todoLists">{{item}}</li>
+  </ul>
