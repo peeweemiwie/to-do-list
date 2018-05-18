@@ -11,5 +11,10 @@ export class InputsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  heroes = [];
+  addHero(newHero: string) {
+    if (newHero) {
+      this.heroes.push(newHero);
+    }
+  }
 }
