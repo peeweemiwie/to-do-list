@@ -1,0 +1,18 @@
+
+<div class="list-container">
+  <ul>
+    <li *ngFor="let item of todoLists">
+      <label class="selectable-list-item-container">{{item}}
+        <input type="checkbox" (click)="removeRow(item)">
+        <span class="checkmark"></span>
+      </label>
+    </li>
+  </ul>
+
+  <div class="form-controls">
+    <input #newItem (keyup.enter)="addList(newItem.value)">
+
+    <button (click)="addList(newItem.value)">Add Task</button>
+    <a>Cancel</a>
+  </div>
+</div>

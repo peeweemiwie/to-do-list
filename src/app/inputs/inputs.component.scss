@@ -1,0 +1,71 @@
+@import '~melanin/src/sass/_variables';
+
+.list-container {
+  .form-controls {
+    padding-left: 35px;
+    input {
+      display: block;
+      width: 100%;
+      height: 25px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: red;
+      margin-right: 5px;
+      padding: 10px;
+      border-radius: 10%;
+      color: white;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+  .selectable-list-item-container {
+    padding-left: 35px;
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    border-bottom: solid lightgrey 1px;
+    padding-bottom: 12px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    input:checked ~ .checkmark {
+      background-color: #eee;
+    }
+    
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: solid 1px grey;
+    }
+    
+    .checkmark:after {
+      content: "\2713";
+      position: absolute;
+      display: none;
+      color: grey;
+      top: 0px;
+      left: 5px;
+    }
+  }
+
+  .selectable-list-item-container:hover input ~ .checkmark {
+    background-color: #eee;
+  }
+}
