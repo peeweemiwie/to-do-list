@@ -17,4 +17,10 @@ export class InputsComponent implements OnInit {
       this.todoLists.push(newItem);
     }
   }
+  removeRow(item: string) {
+    if(item) {
+      const itemIndex:number = this.todoLists.indexOf(item);
+      this.todoLists.splice(itemIndex, 1);
+    }
+  }
 }

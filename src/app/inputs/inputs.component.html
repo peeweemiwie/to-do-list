@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let item of todoLists">
       <label class="selectable-list-item-container">{{item}}
-        <input type="checkbox">
+        <input type="checkbox" (click)="removeRow(item)">
         <span class="checkmark"></span>
       </label>
     </li>
