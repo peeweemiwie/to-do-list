@@ -22,8 +22,7 @@
     "@angular/router": "^6.0.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "melanin": "git+ssh://git@github.com/cotalabs/melanin.git#v0.5.21"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
