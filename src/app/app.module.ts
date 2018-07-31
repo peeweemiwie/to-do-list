@@ -4,7 +4,7 @@ import { MatToolbarModule, MatCardModule, MatSelectModule, MatCard, MatDividerMo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { InputsComponent } from './inputs/inputs.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { InputsComponent } from './inputs/inputs.component';
     MatGridListModule,
     MatInputModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

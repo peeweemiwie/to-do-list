@@ -10,9 +10,9 @@
   </ul>
 
   <div class="form-controls">
-    <input #newItem (keyup.enter)="addList(newItem.value)">
+    <input #newItem (keyup.enter)="addList(newItem.value)" [(ngModel)]="addTaskValue">
 
     <button (click)="addList(newItem.value)">Add Task</button>
-    <a>Cancel</a>
+    <button (click)="clearItem(newItem)">Cancel</button>
   </div>
 </div>
