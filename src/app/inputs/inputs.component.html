@@ -2,7 +2,7 @@
 <div class="list-container">
   <ul>
     <li *ngFor="let item of todoLists">
-      <label class="selectable-list-item-container">{{item}}
+      <label class="selectable-list-item-container">{{item.item}} {{item.date}}
         <input type="checkbox" (click)="removeRow(item)">
         <span class="checkmark"></span>
       </label>
@@ -10,9 +10,9 @@
   </ul>
 
   <div class="form-controls">
-    <input #newItem (keyup.enter)="addList(newItem.value)" [(ngModel)]="addTaskValue">
-
-    <button (click)="addList(newItem.value)">Add Task</button>
-    <button (click)="clearItem(newItem)">Cancel</button>
+    <input type="text" [(ngModel)]="addTaskValue.item">
+    <input type="date" [(ngModel)]="addTaskValue.date">
+    <button (click)="addList()">Add Task</button>
+    <button (click)="clearItem()">Cancel</button>
   </div>
 </div>

@@ -5,21 +5,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inputs.component.scss']
 })
 export class InputsComponent implements OnInit {
-  addTaskValue;
+  addTaskValue: { item: string, date: string} = { item: null, date: null};
   constructor() { }
 
   ngOnInit() {
   }
   todoLists = [];
-  addList(newItem: string) {
-    if (newItem) {
-      this.todoLists.push(newItem);
+  addList() {
+    if (this.addTaskValue.item && this.addTaskValue.date) {
+      this.todoLists.push(this.addTaskValue);
     }
   }
-  clearItem(newItem) {
-    if (newItem) {
-      this.addTaskValue = null;
-      console.log('newItem ', newItem)
+  clearItem() {
+    if (this.addTaskValue.item || this.addTaskValue.date) {
+      this.addTaskValue.item = null;
+      this.addTaskValue.date = null;
     }
   }
   removeRow(item: string) {
